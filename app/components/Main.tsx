@@ -1,3 +1,4 @@
+import About from "./About";
 import Contact from "./Contact";
 import Landing from "./Landing";
 import Projects from "./Projects";
@@ -13,6 +14,7 @@ export default function Main() {
             `}</style>
             <Landing />
             <Projects />
+            <About />
             <Resume />
             <Contact />
         </main>

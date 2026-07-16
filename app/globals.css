@@ -2,7 +2,7 @@
 @import "tailwindcss";
 
 html {
-  scroll-padding-top: 80px;
+  scroll-padding-top: 1rem;
   scroll-behavior: smooth;
 }
 
@@ -18,9 +18,9 @@ html {
 }
 
 :root {
-  --background: #0a0a0a;
+  --background: #0f161f;
   --foreground: #ededed;
-  --highlight: #c1ff72;
+  --highlight: #3dc8a7;
   --font-jakarta: 'Plus Jakarta Sans', sans-serif;
   --font-jetbrains: 'JetBrains Mono', monospace;
   transition: background-color 0.3s ease, color 0.3s ease;
@@ -29,7 +29,7 @@ html {
 html.light-mode {
   --background: #ffffff;
   --foreground: #171717;
-  --highlight: #9dda3b;
+  --highlight: #3dc8a7;
 }
 
 @theme inline {

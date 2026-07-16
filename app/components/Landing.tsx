@@ -1,34 +1,80 @@
+import { FaGithub, FaLinkedin, FaXTwitter } from "react-icons/fa6";
+import { MdEmail } from "react-icons/md";
+
+const socialLinks = [
+    { name: "LinkedIn", url: "https://linkedin.com/in/bugragedikli", icon: FaLinkedin },
+    { name: "GitHub", url: "https://github.com/bugragedikli", icon: FaGithub },
+    { name: "X", url: "https://twitter.com/bugragedikli_", icon: FaXTwitter },
+    { name: "Email", url: "mailto:bugragedikli024@gmail.com", icon: MdEmail },
+];
+
 export default function Landing() {
     return (
-        <section id="about" className="w-full min-h-screen flex items-center justify-center px-6">
-            <div className="max-w-6xl w-full grid md:grid-cols-2 gap-12 items-center">
+        <section id="home" className="w-full min-h-[calc(100vh-7rem)] flex items-center px-6">
+            <div className="max-w-6xl w-full mx-auto grid md:grid-cols-2 gap-12 md:gap-16 items-center">
+                {/* Left — text */}
                 <div>
-                    <h1 className="text-6xl md:text-7xl font-bold mb-3 font-jakarta">
-                        Buğra Gedikli
+                    <h1 className="text-5xl md:text-6xl font-bold font-jakarta leading-[1.1] mb-6">
+                        Game developer.
+                        <br />
+                        <span className="text-highlight">software engineer.</span>
                     </h1>
-                    <h2 className="text-2xl md:text-3xl text-gray-600 dark:text-gray-400 font-jakarta mb-6">
-                        Game Developer & Software Engineer
-                    </h2>
-                    <p className="text-lg text-gray-700 dark:text-gray-300 font-jakarta leading-relaxed mb-8 max-w-md">
-                        Building immersive games and robust software. Focused on performance, user experience, and shipping things that matter.
+
+                    <p className="text-lg md:text-xl text-gray-600 dark:text-gray-400 font-jakarta leading-relaxed mb-8 max-w-md">
+                        I&apos;m Buğra, a game &amp; software developer from Turkey. I focus on building immersive games and reliable software.
                     </p>
 
-                    <div className="flex gap-4">
-                        <a href="#projects" className="px-6 py-3 bg-highlight text-background rounded font-jakarta hover:opacity-80 transition">
-                            View Work
+                    <div className="flex flex-wrap gap-4">
+                        <a
+                            href="#resume"
+                            className="inline-flex items-center gap-2 px-7 py-4 bg-foreground text-background rounded-lg font-jakarta font-semibold hover:opacity-90 transition"
+                        >
+                            My experience <span aria-hidden>↘</span>
                         </a>
-                        <a href="#contact" className="px-6 py-3 border border-foreground rounded font-jakarta hover:text-background hover:bg-foreground transition">
+                        <a
+                            href="#contact"
+                            className="px-7 py-4 bg-foreground/10 text-foreground rounded-lg font-jakarta font-semibold hover:bg-foreground/20 transition"
+                        >
                             Contact
                         </a>
                     </div>
+
+                    <div className="flex gap-5 mt-10 text-2xl">
+                        {socialLinks.map((link) => (
+                            <a
+                                key={link.name}
+                                href={link.url}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                title={link.name}
+                                className="opacity-80 hover:opacity-100 hover:text-highlight transition"
+                            >
+                                <link.icon />
+                            </a>
+                        ))}
+                    </div>
                 </div>
 
-                <div className="hidden md:flex justify-center items-center">
-                    <img 
-                        src="/bugra.png" 
-                        alt="Buğra Gedikli" 
-                        className="w-80 h-80 rounded-full object-cover shadow-lg border-4 border-background"
-                    />
+                {/* Right — portrait */}
+                <div className="relative hidden md:flex justify-center items-center">
+                    <div className="relative w-80 h-80 lg:w-96 lg:h-96">
+                        {/* dot grid */}
+                        <div
+                            className="absolute -top-8 -right-10 w-44 h-44 text-gray-500/50 z-0"
+                            style={{
+                                backgroundImage: "radial-gradient(currentColor 1.5px, transparent 1.5px)",
+                                backgroundSize: "18px 18px",
+                            }}
+                        />
+                        {/* depth circle */}
+                        <div className="absolute inset-0 rounded-full bg-highlight/20 translate-x-6 translate-y-6 z-0" />
+                        {/* photo */}
+                        <img
+                            src="/bugra.png"
+                            alt="Buğra Gedikli"
+                            className="relative z-10 w-full h-full rounded-full object-cover ring-1 ring-white/10"
+                        />
+                    </div>
                 </div>
             </div>
         </section>
