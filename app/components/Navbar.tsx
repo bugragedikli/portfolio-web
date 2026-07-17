@@ -3,6 +3,7 @@
 
 import { useEffect, useState } from 'react';
 import { MdDarkMode, MdLightMode, MdOutlineDescription } from 'react-icons/md';
+import { navLinks, profile } from '@/app/data/site';
 
 export default function Navbar() {
     const [isDark, setIsDark] = useState(true);
@@ -48,12 +49,18 @@ export default function Navbar() {
                 </a>
                 <div className="flex gap-8 md:gap-12 items-center">
                     <div className="hidden md:flex gap-8 lg:gap-12 text-lg uppercase tracking-[0.15em] font-medium">
-                        <a href="#about" className="jmono opacity-80 hover:opacity-100 hover:text-highlight border-b-2 border-transparent hover:border-highlight pb-1 transition-all">About</a>
-                        <a href="#projects" className="jmono opacity-80 hover:opacity-100 hover:text-highlight border-b-2 border-transparent hover:border-highlight pb-1 transition-all">Projects</a>
-                        <a href="#contact" className="jmono opacity-80 hover:opacity-100 hover:text-highlight border-b-2 border-transparent hover:border-highlight pb-1 transition-all">Contact</a>
+                        {navLinks.map((link) => (
+                            <a
+                                key={link.href}
+                                href={link.href}
+                                className="jmono opacity-80 hover:opacity-100 hover:text-highlight border-b-2 border-transparent hover:border-highlight pb-1 transition-all"
+                            >
+                                {link.label}
+                            </a>
+                        ))}
                     </div>
                     <a
-                        href="/bugra_gedikli_resume.pdf"
+                        href={profile.resumeUrl}
                         target="_blank"
                         rel="noopener noreferrer"
                         title="View CV"

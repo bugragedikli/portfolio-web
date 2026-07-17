@@ -48,3 +48,11 @@ body {
 .jmono {
   font-family: var(--font-jetbrains);
 }
+
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}

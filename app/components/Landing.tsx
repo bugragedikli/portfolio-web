@@ -1,12 +1,5 @@
-import { FaGithub, FaLinkedin, FaXTwitter } from "react-icons/fa6";
-import { MdEmail } from "react-icons/md";
-
-const socialLinks = [
-    { name: "LinkedIn", url: "https://linkedin.com/in/bugragedikli", icon: FaLinkedin },
-    { name: "GitHub", url: "https://github.com/bugragedikli", icon: FaGithub },
-    { name: "X", url: "https://twitter.com/bugragedikli_", icon: FaXTwitter },
-    { name: "Email", url: "mailto:bugragedikli024@gmail.com", icon: MdEmail },
-];
+import { socialLinks } from "@/app/data/social";
+import { profile, hero } from "@/app/data/site";
 
 export default function Landing() {
     return (
@@ -15,27 +8,27 @@ export default function Landing() {
                 {/* Left — text */}
                 <div>
                     <h1 className="text-5xl md:text-6xl font-bold font-jakarta leading-[1.1] mb-6">
-                        Game developer.
+                        {hero.titleLead}
                         <br />
-                        <span className="text-highlight">software engineer.</span>
+                        <span className="text-highlight">{hero.titleAccent}</span>
                     </h1>
 
                     <p className="text-lg md:text-xl text-gray-600 dark:text-gray-400 font-jakarta leading-relaxed mb-8 max-w-md">
-                        I&apos;m Buğra, a game &amp; software developer from Turkey. I focus on building immersive games and reliable software.
+                        {hero.tagline}
                     </p>
 
                     <div className="flex flex-wrap gap-4">
                         <a
-                            href="#resume"
+                            href={hero.primaryCta.href}
                             className="inline-flex items-center gap-2 px-7 py-4 bg-foreground text-background rounded-lg font-jakarta font-semibold hover:opacity-90 transition"
                         >
-                            My experience <span aria-hidden>↘</span>
+                            {hero.primaryCta.label} <span aria-hidden>↘</span>
                         </a>
                         <a
-                            href="#contact"
+                            href={hero.secondaryCta.href}
                             className="px-7 py-4 bg-foreground/10 text-foreground rounded-lg font-jakarta font-semibold hover:bg-foreground/20 transition"
                         >
-                            Contact
+                            {hero.secondaryCta.label}
                         </a>
                     </div>
 
@@ -70,8 +63,8 @@ export default function Landing() {
                         <div className="absolute inset-0 rounded-full bg-highlight/20 translate-x-6 translate-y-6 z-0" />
                         {/* photo */}
                         <img
-                            src="/bugra.png"
-                            alt="Buğra Gedikli"
+                            src={profile.photo}
+                            alt={profile.name}
                             className="relative z-10 w-full h-full rounded-full object-cover ring-1 ring-white/10"
                         />
                     </div>

@@ -1,17 +1,11 @@
 'use client';
 
 import { useState } from "react";
-import { FaGithub, FaLinkedin, FaXTwitter } from "react-icons/fa6";
+import { socialLinks } from "@/app/data/social";
 
 // Set NEXT_PUBLIC_WEB3FORMS_KEY in .env.local — get a free key at https://web3forms.com
 // (the destination email stays on their servers and never appears in this code).
 const WEB3FORMS_ACCESS_KEY = process.env.NEXT_PUBLIC_WEB3FORMS_KEY;
-
-const socialLinks = [
-    { name: "GitHub", url: "https://github.com/bugragedikli", icon: FaGithub },
-    { name: "LinkedIn", url: "https://linkedin.com/in/bugragedikli", icon: FaLinkedin },
-    { name: "X", url: "https://twitter.com/bugragedikli_", icon: FaXTwitter },
-];
 
 type Status = "idle" | "sending" | "success" | "error";
 
