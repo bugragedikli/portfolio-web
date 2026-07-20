@@ -85,4 +85,16 @@ export const projects: Project[] = [
             { label: 'GitHub', url: 'https://github.com/bugragedikli/grid-game'}
         ],
     },
+    {
+        id: 'stickandsteal',
+        title: 'Stick & Steal',
+        role: 'Personal Project',
+        description: 'A 2D hyper-casual game built with Unity & C#, featuring a physics-based extendable arm mechanic with raycast collision detection, dynamic multi-segment rendering, audio management, and a full menu/UI flow.',
+        tech: 'Unity (C#)',
+        imageUrl: '/sticksteal.png',
+        links: [
+            { label: 'itch.io', url: 'https://grabus.itch.io/stick-steal' },
+            { label: 'GitHub', url: 'https://github.com/bugragedikli/stick-and-steal'}
+        ],
+    }
 ]
