@@ -27,6 +27,8 @@ export const projects: Project[] = [
         description: 'A relaxing puzzle game published on the Nintendo eShop and PlayStation Store, built with Unity and C# during my internship at Dinomore Games. I led the technical development and architected all systems within a demanding 3-month production window.',
         imageUrl: '/voltline_logo.avif',
         tech: 'Unity (C#)',
+        team: "2",
+        duration: "3 Months",
         links: [
             { label: 'Nintendo', url: 'https://www.nintendo.com/us/store/products/voltline-switch/' },
             { label: 'PlayStation', url: 'https://store.playstation.com/tr-tr/product/EB2251-CUSA58133_00-0504252544586584' },
